@@ -2,84 +2,35 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
-@app.route('/')
-def mission():
-    return 'Миссия Колонизация Марса'
-
-
-@app.route('/index')
-def apple():
-    return 'И на Марсе будут яблони цвести!'
-
-
-@app.route('/promotion')
-def present():
+@app.route('/carousel')
+def mars():
     return '''<!doctype html>
-            <html lang='ru'>
-            <head>
-                <meta charset='utf-8'>
-            </head>
-            <body>
-                <p>Человечество вырастает из детства.</p>
-                <p>Человечеству мала одна планета.</p>
-                <p>Мы сделаем обитаемыми безжизненные пока планеты.</p>
-                <p>И начнем с Марса!</p>
-                <p>Присоединяйся!</p>
-            </body>
-            </html>'''
-
-
-@app.route('/image_mars')
-def image_mars():
-    return '''<!doctype>
                 <html lang="ru">
                 <head>
-                    <meta charset="utf-8">
-                    <title>Привет, Марс!</title>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Пейзажи Porsche</title>
+                    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
                 </head>
                 <body>
-                    <p><strong>Жди нас, Марс!</strong></p>
-                    <img src="/static/image/mars.jpeg" alt="Марс закрыт для зрителей">
-                    <p>Вот она какая, красная планета.</p>
+                    <div class="container mt-4">
+                        <h1 class="text-center">Пейзажи Porsche</h1>
+                        <div id="porscheCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/static/image/porshe1.jpeg" class="d-block w-100" alt="porshe 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/static/image/porshe2.jpeg" class="d-block w-100" alt="porshe 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/static/image/porshe3.jpeg" class="d-block w-100" alt="porshe 3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </body>
-                </html>'''
-
-
-@app.route('/promotion_image')
-def advertising():
-    return '''<!doctype html>
-                <html lang="en">
-                <head>
-                    <meta charset="utf-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                    <link rel="stylesheet"
-                          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-                          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-                          crossorigin="anonymous">
-                    <title>Колонизация</title>
-                </head>
-                <body>
-                <h1>Жди нас, Марс!</h1>
-                <img src="/static/image/mars.jpeg" alt="Марс закрыт для зрителей">
-
-                <div class="alert" style="background-color: #dcdcdc; font-weight: bold;">
-                    Человечество вырастает из детства.
-                </div>
-                <div class="alert" style="background-color: #c8e6c9; font-weight: bold;">
-                    Человечеству мала одна планета.
-                </div>
-                <div class="alert" style="background-color: #e3f2fd; font-weight: bold;">
-                    Мы сделаем обитаемыми безжизненные пока планеты.
-                </div>
-                <div class="alert" style="background-color: #fff9c4; font-weight: bold;">
-                    И начнем с Марса!
-                </div>
-                <div class="alert" style="background-color: #f8bbd0; font-weight: bold;">
-                    Присоединяйся!
-                </div>
-                </body>
-
                 </html>'''
 
 
