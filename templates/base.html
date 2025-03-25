@@ -1,16 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
 <body>
-    <h1>Миссия Колонизация Марса</h1>
-    <h4>И на Марсе будут яблони цвести!</h4>
-    <center>
-        <p><strong>{{sim}}</strong></p>
-        <img src="{{image}}" alt="Нет фото">
-    </center>
-    {% block content %}{% endblock %}
+  <h1>Миссия Колонизации марса</h1>
+  <h2>И на марсе будут яблони цвести!</h2>
+  <h3>Список профессий</h3>
+  <{{ param }}>
+    {% for i in prof %}
+      <li>{{ i }}</li>
+    {% endfor %}
 </body>
 </html>
